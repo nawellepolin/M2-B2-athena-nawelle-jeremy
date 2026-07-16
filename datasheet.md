@@ -4,15 +4,15 @@
 > **Modèle Gebru et al. (2018), 7 sections, 2 pages max.**
 > Signée binôme.
 
-**Auteurs** : <prénom1>, <prénom2>
-**Date** : <date>
+**Auteurs** : Jeremy, Nawelle
+**Date** : 16/07/2026
 **Version** : v1.0.0
 
 ## 1. Motivation
 
 > Pourquoi ce dataset existe ? Qui l'a créé ?
 
-- ...
+- Ce dataset est le dataset RH de la boîte Athéna RH alimenté dans le but d'entraîner un modèle qui prédit le niveau de revenu d'une personne (>50K vs ≤50K) à partir de son profil professionnel, pour alimenter un outil d'aide à la décision RH.
 
 ## 2. Composition
 
@@ -47,8 +47,9 @@
 | `manager_comments` | str | Texte libre **avec PII** — à anonymiser en async |
 
 **Résumé verdict éthique** :
-- DI le plus problématique : ...
-- Intersectionnalités notables : ...
+- DI le plus problématique : race (0.347) / sex (0.358)
+- Intersectionnalités notables : Race X sex (cf schema dans le jupyter)
+  Nous avons détecté un biais raciste en faveur des asiatiques / blancs (avec un DI de 0.347) et un biais sexiste en faveur des hommes (avec un DI de 0.358). Les valeurs de DI sont particulièrement extrèmes la borne limite inférieure acceptable étant de 0.80.
 
 ## 3. Processus de collecte
 
